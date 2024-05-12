@@ -1,0 +1,69 @@
+<diagram program="umletino" version="15.1"><zoom_level>14</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>616</x><y>110</y><w>294</w><h>182</h></coordinates><panel_attributes>Simulation.FlyWeight.Ants
+/AntWorker/
+--
+_-img: Image_
+_# MAXSPEED: int_
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>224</x><y>264</y><w>294</w><h>266</h></coordinates><panel_attributes>Simulation.FlyWeight.Ants
+/Ant/
+--
+/+move(): void/
+/# setIconPosition(): void/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>208</y><w>140</w><h>224</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>602</x><y>460</y><w>294</w><h>308</h></coordinates><panel_attributes>Simulation.FlyWeight.Ants
+AntQueen
+--
+-antSet:Set
+-candy:Food
+
+--
++addAntEco():void
++addAnt(a1: AntWorker): void
++removeAnt(a1: AntWorker): void
++addFood(f: Food): void
++removeFood(): void
++getFoodPos():Point2D
++move():void
+# setIconPosition(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>390</y><w>126</w><h>238</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>742</x><y>278</y><w>70</w><h>210</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>182</x><y>810</y><w>336</w><h>280</h></coordinates><panel_attributes>Simulation.FlyWeight
+/SimFactor/
+--
+# loc: Point2D
+# ld: Land
+_# ICON_WIDTH:int_
+_# ICON_HEIGHT:int_
+#iconview: ImageView
+--
+/move(): void/
++gettLoc():Point2D
++addToLand(): void
++removeToLand(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>516</y><w>42</w><h>322</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>602</x><y>810</y><w>294</w><h>266</h></coordinates><panel_attributes>Simulation.FlyWeight
+Food
+--
+# setIconPosition():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>922</y><w>126</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1008</x><y>110</y><w>294</w><h>322</h></coordinates><panel_attributes>Simulation.FlyWeight.Ants
+AntWorkerDynamic
+--
+-energyLoaded: boolean
+-energyIndicator: Circle
+-antQ: AntQueen
+-candy: Food
+--
++move():void
++addToLand(): void
++removeToLand(): void
++setIndicatorColor(c: Color): void
+# setIconPosition(): void
+-locTo(pos: Point2D): void
+-isInBound(loc: Point2D): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>896</x><y>180</y><w>140</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>728</x><y>754</y><w>42</w><h>84</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1078</x><y>488</y><w>294</w><h>266</h></coordinates><panel_attributes>Simulation.FlyWeight
+Land
+--
+-antSet: Set&lt;AntQueen&gt;
+-basePane: Pane
+_-WINWIDTH: int_
+_-WINHEIGHT: int_
+_-TRIGGER_DISTANCE: int_
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>882</x><y>614</y><w>224</w><h>56</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element></diagram>

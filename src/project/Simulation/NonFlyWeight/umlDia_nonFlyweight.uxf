@@ -1,0 +1,62 @@
+<diagram program="umletino" version="15.1"><zoom_level>15</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>695</x><y>33</y><w>315</w><h>300</h></coordinates><panel_attributes>Simulation.NonFlyWeight.Ants
+AntWorker
+--
+-energyLoaded:boolean
+-energyIndicator:Circle
+-antQ: AntQueen
+ -candy: Food
+-MAXSPEED:int
+
+--
+/move(): void/
+/# setIconPosition(): void/
++move():void
+# setIconPosition(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>275</x><y>198</y><w>315</w><h>285</h></coordinates><panel_attributes>Simulation.NonFlyWeight.Ants
+/Ant/
+--
+/+move(): void/
+/# setIconPosition(): void/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>575</x><y>153</y><w>150</w><h>225</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>408</y><w>315</w><h>330</h></coordinates><panel_attributes>Simulation.NonFlyWeight.Ants
+AntQueen
+--
+-antSet:Set
+-candy:Food
+
+--
++addAntEco():void
++addAnt(a1: AntWorker): void
++removeAnt(a1: AntWorker): void
++addFood(f: Food): void
++removeFood(): void
++getFoodPos():Point2D
++move():void
+# setIconPosition(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>575</x><y>333</y><w>135</w><h>255</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>318</y><w>75</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>798</y><w>360</w><h>285</h></coordinates><panel_attributes>Simulation.NonFlyWeight
+/SimFactor/
+--
+# loc: Point2D
+# ld: Land
+_# ICON_WIDTH:int_
+_# ICON_HEIGHT:int_
+#iconview: ImageView
+--
+/move(): void/
++gettLoc():Point2D
++addToLand(): void
++removeToLand(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>468</y><w>45</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>798</y><w>315</w><h>285</h></coordinates><panel_attributes>Simulation.NonFlyWeight
+Food
+--
+# setIconPosition():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>575</x><y>918</y><w>135</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>815</x><y>723</y><w>45</w><h>105</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>423</y><w>315</w><h>285</h></coordinates><panel_attributes>Simulation.NonFlyWeight
+Land
+--
+-antSet: Set&lt;AntQueen&gt;
+-basePane: Pane
+_-WINWIDTH: int_
+_-WINHEIGHT: int_
+_-TRIGGER_DISTANCE: int_
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>558</y><w>240</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element></diagram>
